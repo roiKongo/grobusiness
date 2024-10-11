@@ -1,9 +1,7 @@
 import { put, call, takeLatest} from "redux-saga/effects"
 import { loginUser,loginUserSuccess,loginUserFailure } from "../reducers/slices/authSlice";
 import { authenticateUser } from "../../services/auth";
-
 function* loginWorker (action){
-   
 
     try {
         const {username,password} = action.payload;
